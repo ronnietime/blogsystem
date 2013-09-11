@@ -1,0 +1,32 @@
+/* HTML5 Boilerplate */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display:block; }
+
+* {font-size:100.01%;}
+html  { direction: ltr; font-family: Helvetica, Arial, sans-serif; color: #000; }
+body { margin:0; position: relative; -webkit-font-smoothing: antialiased; font:1em/1.4; }
+
+h1, h2, h3, h4, h5, h6 { text-rendering: optimizeLegibility; font-weight:normal; }
+
+a { color:#37728A; text-decoration:none; outline:none;}
+a:hover { text-decoration:underline; }
+a:hover, a:active { outline: 0; }
+a:visited {color:#665E80;}
+
+ul { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+.clear { clear: both; display: block; }
+
+.wrapper-holder{ width:100%; position:relative; overflow:hidden; }
+#wrapper { background:#fff; min-width:768px; max-width:1024px; margin:0 auto; }
+
+.language { float: right; }
+
+.navigation-holder, .pagination-holder { overflow: hidden; }
+.navigation-list li, .pagination-list li { float: left; }
+.pagination-list { float: right; }
+.pagination-list .prev-disable, .pagination-list .next-disable { visibility: hidden; }
+
+.main-content-list .article { float: left; width: 75%; }
+
+.side-bar { display: none; }
+
