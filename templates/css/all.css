@@ -58,6 +58,8 @@ code {font-family: "Courier New", Courier, monospace;}
 .sidebar .widget .widget-title {padding: 0 16px; border-top: 2px solid #096aa2; border-bottom: 1px solid #5296bd; color: #b11b1b; font-size: 1.1em; line-height: 2.1em; background: -webkit-linear-gradient(#F3F3F3, #E9E9E9); background: -o-linear-gradient(#F3F3F3, #E9E9E9); background: -moz-linear-gradient(#F3F3F3, #E9E9E9); background: linear-gradient(#F3F3F3, #E9E9E9);}
 .sidebar-list {margin: 16px}
 .sidebar-list li {margin: 0; padding: 5px 0; border-top: 1px solid #c4d6e5;}
+.sidebar-list li:last-child {border-bottom: 1px solid #c4d6e5;}
+.archive-list li:last-child {border-bottom: none;}
 .sidebar-list li a:before {content: '\25BA\00A0'; color: #096AA2;}
 .archive-list .hierarchy, .archive-list .post-list {margin: 5px 0 -5px 16px;}
 .archive-list li {border: 0;}
@@ -80,15 +82,19 @@ code {font-family: "Courier New", Courier, monospace;}
 .post-meta a:hover {color: #0069a0; text-decoration: none;}
 .post-meta .label {color: #757575;}
 .post-body {padding: 16px;}
-.post-body h1 {margin-bottom: 0.4em; font-size: 2.5em; line-height: 1em;}
-.post-body h2 {margin-bottom: 0.625em; font-size: 1.6em; line-height: 1em;}
-.post-body h3 {margin-bottom: 0.8em; font-size: 1.25em; line-height: 1em;}
-.post-body p, .post-body figure, .post-body h4, .post-body blockquote, .post-body ul, post-body ol {margin-bottom: 1em;}
-.post-body blockquote {padding: 1em; border: 1px solid #d9d9d9; background: #f8f8f8; font-style: italic;}
+.post-body p, .post-body figure, .post-body blockquote, .post-body ul, .post-body ol, .post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body table {margin-bottom: 8px;}
+.post-body h1 {font-size: 2.5em; line-height: 1em;}
+.post-body h2 {font-size: 1.6em; line-height: 1em;}
+.post-body h3 {font-size: 1.25em; line-height: 1em;}
+.post-body img {max-width: 648px; height: auto;}
+.post-body table {margin: 0 auto; border: 1px solid #d9d9d9;}
+.post-body th {padding: 5px 10px; border: 1px solid #d9d9d9; background: #eef4f8;}
+.post-body td {padding: 5px 10px; border: 1px solid #d9d9d9;}
+.post-body blockquote {padding: 15px; border: 1px solid #d9d9d9; background: #f8f8f8; font-style: italic;}
 .post-body blockquote p {margin-bottom: 0;}
-.post-body ul {padding: 0 1em 0 3em; list-style: disc;}
-.post-body ol {padding: 0 1em 0 3em; list-style: decimal;}
-.post-body li {margin-bottom: 0.25em; }
+.post-body ul {padding: 0 15px 0 30px; list-style: disc;}
+.post-body ol {padding: 0 15px 0 30px; list-style: decimal;}
+.post-body li {margin-bottom: 3px; }
 .read-more, .prev-next-holder {overflow: hidden; padding: 0 16px 16px 16px;}
 .read-more a {float: right; height: 20px; padding-left: 20px; color: #1f6dae; line-height: 20px; text-decoration: none; text-transform: uppercase; text-shadow: #f0f0f0 1px 1px 2px; font-weight: bold; background-position: 0 -44px;}
 .read-more a:hover {color: #000;}
