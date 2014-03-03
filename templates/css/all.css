@@ -26,7 +26,7 @@ code {font-family: "Courier New", Courier, monospace;}
 .sprites {background: url("images/sprites.png") no-repeat;}
 
 /* Header Area */
-.header {overflow: hidden; margin: 0 auto; padding-bottom: 20px; background: -webkit-linear-gradient(#EBEBEB, #FFFFFF); background: -o-linear-gradient(#EBEBEB, #FFFFFF); background: -moz-linear-gradient(#EBEBEB, #FFFFFF); background: linear-gradient(#EBEBEB, #FFFFFF);}
+.header {overflow: hidden; margin: 0 auto; padding-bottom: 20px; background: #EBEBEB; background: -webkit-linear-gradient(#EBEBEB, #FFFFFF); background: -o-linear-gradient(#EBEBEB, #FFFFFF); background: -moz-linear-gradient(#EBEBEB, #FFFFFF); background: linear-gradient(#EBEBEB, #FFFFFF);}
 .header .logo-holder {float: left;}
 .header .tag-line {margin: 0 0 0 16px; color: #333; letter-spacing: 1px;}
 .header .logo {margin: 25px 0 0 16px;  font-size: 2em; line-height: 1.23em; letter-spacing: -1.5px;}
@@ -38,13 +38,13 @@ code {font-family: "Courier New", Courier, monospace;}
 .search-form button {overflow: hidden; width: 22px; height: 23px; border: 1px solid #fff; border-left: none; background-position: 0 0; text-indent: -500px; vertical-align: middle; cursor: pointer;}
 
 /* Top & Bottom Navigation Bar */
-.nav {background: -webkit-linear-gradient(#60A8D1, #2688C0); background: -o-linear-gradient(#60A8D1, #2688C0); background: -moz-linear-gradient(#60A8D1, #2688C0); background: linear-gradient(#60A8D1, #2688C0);}
+.nav {background: #60A8D1; background: -webkit-linear-gradient(#60A8D1, #2688C0); background: -o-linear-gradient(#60A8D1, #2688C0); background: -moz-linear-gradient(#60A8D1, #2688C0); background: linear-gradient(#60A8D1, #2688C0);}
 .menu {overflow: hidden;}
 .menu li {float: left; line-height: 2.5em; border-right: 1px solid #7ab6d8;}
-.menu li:hover, .nav .menu .current {background: -webkit-linear-gradient(#D5E8F2, #C5DFEE); background: -o-linear-gradient(#D5E8F2, #C5DFEE); background: -moz-linear-gradient(#D5E8F2, #C5DFEE); background: linear-gradient(#D5E8F2, #C5DFEE);}
+.menu li:hover, .nav .menu .current {background: #D5E8F2; background: -webkit-linear-gradient(#D5E8F2, #C5DFEE); background: -o-linear-gradient(#D5E8F2, #C5DFEE); background: -moz-linear-gradient(#D5E8F2, #C5DFEE); background: linear-gradient(#D5E8F2, #C5DFEE);}
 .menu a {padding: 0 30px; color: #fff; text-shadow: #26688e 0 0 2px; text-align: center; font-size: 1.28em; font-weight: bold; display: block;}
 .menu a:hover, .nav .current a {color: #C80000; text-decoration: none; text-shadow: none;}
-.bottom-nav {background: -webkit-linear-gradient(#C1DDED, #78B5D8); background: -o-linear-gradient(#C1DDED, #78B5D8); background: -moz-linear-gradient(#C1DDED, #78B5D8); background: linear-gradient(#C1DDED, #78B5D8);}
+.bottom-nav {background: #78B5D8; background: -webkit-linear-gradient(#C1DDED, #78B5D8); background: -o-linear-gradient(#C1DDED, #78B5D8); background: -moz-linear-gradient(#C1DDED, #78B5D8); background: linear-gradient(#C1DDED, #78B5D8);}
 .bottom-nav .menu a:hover, .bottom-nav .current a {color: #2085BE;}
 
 /* Footer */
@@ -113,4 +113,3 @@ code {font-family: "Courier New", Courier, monospace;}
 .pagination .unavailable span {color: #999999;}
 .pagination .current span {background: #008cba; color: #FFF; font-weight: bold;}
 .pagination li:hover a, ul.pagination li a:focus {background: #e6e6e6; text-decoration: none; color: #909090;}
-
