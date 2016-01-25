@@ -23,14 +23,14 @@ i, em {font-style: italic;}
 code {font-family: "Courier New", Courier, monospace;}
 
 .wrapper {background: #fff; width: 1024px; margin: 0 auto 30px; -moz-box-shadow: 0 0 10px #AAA; -webkit-box-shadow: 0 0 10px #AAA; box-shadow: 0 0 10px #AAA;}
-.sprites {background: url("../images/sprites.png") no-repeat;}
+.sprites {background: url('/assets/mypic.png') no-repeat;}
 
 /* Header Area */
 .header {overflow: hidden; margin: 0 auto; padding-bottom: 20px; background: #EBEBEB; background: -webkit-linear-gradient(#EBEBEB, #FFFFFF); background: -o-linear-gradient(#EBEBEB, #FFFFFF); background: -moz-linear-gradient(#EBEBEB, #FFFFFF); background: linear-gradient(#EBEBEB, #FFFFFF);}
 .header .logo-holder {float: left;}
 .header .tag-line {margin: 0 0 0 16px; color: #333; letter-spacing: 1px;}
 .header .logo {margin: 25px 0 0 16px;  font-size: 2em; line-height: 1.23em; letter-spacing: -1.5px;}
-.header .logo a {color: #3f3f3f; text-transform: uppercase;}
+.header .logo a {color: #3f3f3f; text-transform: capitalize;}
 .header .logo a:hover {color: #000; text-decoration: none;}
 .search-form {float: right; width: 231px; height: 21px; margin: 25px 16px 0 0; padding: 5px 0; border: none;}
 .search-form fieldset { border: 1px #AAA solid; }

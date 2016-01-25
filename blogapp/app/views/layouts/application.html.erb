@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<%= render "/refinery/html_tag" %>
+  <head>
+    <%= render "/refinery/head" %>
+  </head>
+  <body id="<%= canonical_id @page %>">
+    <div class="wrapper">
+      <%= render "/refinery/header" -%>
+      
+      <section id="page">
+        <%= yield %>
+      </section>
+
+      <%= render "/refinery/footer" -%>
+    </div>
+    <%= render "/refinery/javascripts" %>
+  </body>
+</html>
