@@ -15,3 +15,119 @@
  *= require refinery/theme
  *= require_self
  */
+
+/*
+  Theme Name: Blue with Grey
+  Author URI: http://ugesi.de/
+  Theme URI:
+  Description: Details oriented theme with modern and decent design. Blue and grey are main colors used in the theme. Menu is widgetized.
+  Author: Ugesi
+  Version: 1.4
+  Tags: blue, white, gray, light, two-columns, fixed-width, editor-style, sticky-post
+  License: GNU General Public License v2.0
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/* Reset browser styles */
+* {margin: 0; padding: 0; border: 0;}
+body {background: #fff; color: #616161; font: 0.85em/1.6em Helvetica, Arial, sans-serif;}
+h1, h2, h3, h4 {font-size: 1em; font-weight: bold;}
+ul {list-style:none;}
+dt {font-weight: 700;}
+table {border-collapse: collapse;}
+img {border: none; vertical-align: middle;}
+a, a:visited {color: #096aa2; text-decoration: none;}
+a:hover {color: #83b200; text-decoration: underline;}
+i, em {font-style: italic;}
+code {font-family: "Courier New", Courier, monospace;}
+
+.wrapper {background: #fff; width: 1024px; margin: 0 auto 30px; -moz-box-shadow: 0 0 10px #AAA; -webkit-box-shadow: 0 0 10px #AAA; box-shadow: 0 0 10px #AAA;}
+.sprites {background: url('sprites.png') no-repeat;}
+
+/* Header Area */
+.header {overflow: hidden; margin: 0 auto; padding-bottom: 20px; background: #EBEBEB; background: -webkit-linear-gradient(#EBEBEB, #FFFFFF); background: -o-linear-gradient(#EBEBEB, #FFFFFF); background: -moz-linear-gradient(#EBEBEB, #FFFFFF); background: linear-gradient(#EBEBEB, #FFFFFF);}
+.header .logo-holder {float: left;}
+.header .tag-line {margin: 0 0 0 16px; color: #333; letter-spacing: 1px;}
+.header .logo {margin: 25px 0 0 16px;  font-size: 2em; line-height: 1.23em; letter-spacing: -1.5px;}
+.header .logo a {color: #3f3f3f; text-transform: capitalize;}
+.header .logo a:hover {color: #000; text-decoration: none;}
+.search-form {float: right; width: 231px; height: 21px; margin: 25px 16px 0 0; padding: 5px 0; border: none;}
+.search-form fieldset { border: 1px #AAA solid; }
+.search-form input {width: 182px; height: 17px; padding: 4px 10px; border: none; background: transparent; color: #444; vertical-align: middle; font-size: 1em;}
+.search-form button {overflow: hidden; width: 22px; height: 23px; border: 1px solid #fff; border-left: none; background-position: 0 0; text-indent: -500px; vertical-align: middle; cursor: pointer;}
+
+/* Top & Bottom Navigation Bar */
+.nav {background: #60A8D1; background: -webkit-linear-gradient(#60A8D1, #2688C0); background: -o-linear-gradient(#60A8D1, #2688C0); background: -moz-linear-gradient(#60A8D1, #2688C0); background: linear-gradient(#60A8D1, #2688C0);}
+.menu {overflow: hidden;}
+.menu li {float: left; line-height: 2.5em; border-right: 1px solid #7ab6d8;}
+.menu li:hover, .nav .menu .current {background: #D5E8F2; background: -webkit-linear-gradient(#D5E8F2, #C5DFEE); background: -o-linear-gradient(#D5E8F2, #C5DFEE); background: -moz-linear-gradient(#D5E8F2, #C5DFEE); background: linear-gradient(#D5E8F2, #C5DFEE);}
+.menu a {padding: 0 30px; color: #fff; text-shadow: #26688e 0 0 2px; text-align: center; font-size: 1.28em; font-weight: bold; display: block;}
+.menu a:hover, .nav .current a {color: #C80000; text-decoration: none; text-shadow: none;}
+.bottom-nav {background: #78B5D8; background: -webkit-linear-gradient(#C1DDED, #78B5D8); background: -o-linear-gradient(#C1DDED, #78B5D8); background: -moz-linear-gradient(#C1DDED, #78B5D8); background: linear-gradient(#C1DDED, #78B5D8);}
+.bottom-nav .menu a:hover, .bottom-nav .current a {color: #2085BE;}
+
+/* Footer */
+.footer {padding: 10px 0 10px; border-bottom: 2px solid #c80000; background: #f0f0f0;}
+.footer p {margin: 0 16px; color: #616161; font-size: 0.917em; line-height: 2em; }
+.footer p a {padding: 0 5px;}
+
+/* Sidebar*/
+.sidebar {float: right; width: 296px; padding: 0 16px 0 0;}
+.sidebar .widget {margin-bottom: 16px; border-bottom: 1px solid #096AA2; -moz-box-shadow: 0 0 10px #AAA; -webkit-box-shadow: 0 0 10px #AAA; box-shadow: 0 0 10px #AAA;}
+.sidebar .widget .widget-title {padding: 0 16px; border-top: 2px solid #096aa2; border-bottom: 1px solid #5296bd; color: #b11b1b; font-size: 1.1em; line-height: 2.1em; background: -webkit-linear-gradient(#F3F3F3, #E9E9E9); background: -o-linear-gradient(#F3F3F3, #E9E9E9); background: -moz-linear-gradient(#F3F3F3, #E9E9E9); background: linear-gradient(#F3F3F3, #E9E9E9);}
+.sidebar-list {margin: 16px}
+.sidebar-list li {margin: 0; padding: 5px 0; border-top: 1px solid #c4d6e5;}
+.sidebar-list li:last-child {border-bottom: 1px solid #c4d6e5;}
+.archive-list li:last-child {border-bottom: none;}
+.sidebar-list li a:before {content: '\25BA\00A0'; color: #096AA2;}
+.archive-list .hierarchy, .archive-list .post-list {margin: 5px 0 -5px 16px;}
+.archive-list li {border: 0;}
+.post-year-link:hover, .post-month-link:hover {color: #83b200; text-decoration: none;}
+.archive-year.expanded .post-year-link:before, .archive-month.expanded .post-month-link:before {content: '\25BC\00A0';}
+.post-list li a:before {content: '';}
+
+/* Content Area*/
+.content {position: relative; z-index: 30; overflow: hidden; margin: 16px auto 0;}
+.content .selected-tag {margin: 0 0 0.5em; padding: 0 16px; font-size: 2.5em; text-shadow: #ccc 0 0 2px; color: #83b200; line-height: 1em;}
+.main {float: left; width: 680px; padding: 0 0 0 16px;} 
+.post {overflow: hidden; margin: 0 0 16px; padding: 0 0 5px; border-bottom: 1px solid #096AA2; -moz-box-shadow: 0 0 10px #AAA; -webkit-box-shadow: 0 0 10px #AAA; box-shadow: 0 0 10px #AAA;}
+.post-title {padding: 0 16px; border-top: 2px solid #096aa2; border-bottom: 1px solid #5296bd; font-size: 1.1em; line-height: 2.1em; background: -webkit-linear-gradient(#F3F3F3, #E9E9E9); background: -o-linear-gradient(#F3F3F3, #E9E9E9); background: -moz-linear-gradient(#F3F3F3, #E9E9E9); background: linear-gradient(#F3F3F3, #E9E9E9); color: #05456a; text-shadow: none;}
+.post-title a {color: #05456a;}
+.post-title a:hover {color: #c80000; text-decoration: none;}
+.post.sticky .post-title {border-top: 2px solid #83b200;}
+.post-meta-holder {padding: 5px 16px; border-bottom: 1px solid #e2e2e2; background: -webkit-linear-gradient(#FAFAFA, #F0F0F0); background: -o-linear-gradient(#FAFAFA, #F0F0F0); background: -moz-linear-gradient(#FAFAFA, #F0F0F0); background: linear-gradient(#FAFAFA, #F0F0F0); font-size: 0.91em;}
+.post-meta {padding: 3px 30px 3px 0; color: #999; line-height: 20px;}
+.post-meta a {color: #999;}
+.post-meta a:hover {color: #0069a0; text-decoration: none;}
+.post-meta .label {color: #757575;}
+.post-body {padding: 16px;}
+.post-body p, .post-body figure, .post-body blockquote, .post-body ul, .post-body ol, .post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body table {margin-bottom: 8px;}
+.post-body h1 {font-size: 2.5em; line-height: 1em;}
+.post-body h2 {font-size: 1.6em; line-height: 1em;}
+.post-body h3 {font-size: 1.25em; line-height: 1em;}
+.post-body img {max-width: 648px; height: auto;}
+.post-body table {margin: 0 auto; border: 1px solid #d9d9d9;}
+.post-body th {padding: 5px 10px; border: 1px solid #d9d9d9; background: #eef4f8;}
+.post-body td {padding: 5px 10px; border: 1px solid #d9d9d9;}
+.post-body blockquote {padding: 15px; border: 1px solid #d9d9d9; background: #f8f8f8; font-style: italic;}
+.post-body blockquote p {margin-bottom: 0;}
+.post-body ul {padding: 0 15px 0 30px; list-style: disc;}
+.post-body ol {padding: 0 15px 0 30px; list-style: decimal;}
+.post-body li {margin-bottom: 3px; }
+.read-more, .prev-next-holder {overflow: hidden; padding: 0 16px 16px 16px;}
+.read-more a {float: right; height: 20px; padding-left: 20px; color: #1f6dae; line-height: 20px; text-decoration: none; text-transform: uppercase; text-shadow: #f0f0f0 1px 1px 2px; font-weight: bold; background-position: 0 -44px;}
+.read-more a:hover {color: #000;}
+.prev-next-holder .prev {float: left;}
+.prev-next-holder .next {float: right;}
+.prev-next-holder a {height: 21px; font-weight: bold; display: inline-block;}
+.prev-next-holder a:hover {color: #000; text-decoration: none;}
+.prev-next-holder .prev a {padding: 0 0 0 21px; background-position: 0 -63px;}
+.prev-next-holder .next a {padding: 0 24px 0 0; background-position: 100% -23px;}
+
+/* Pagination Buttons */
+.pagination-holder {overflow: hidden; margin-bottom: 16px;}
+.pagination {margin: 0 auto; overflow: hidden; height: 23px; float: right;}
+.pagination li {float: left; height: 20px; font-size: 0.9em; margin-left: 7px;}
+.pagination a, .pagination span {display: block; padding: 1px 6px; border-radius: 3px;}
+.pagination .unavailable span {color: #999999;}
+.pagination .current span {background: #008cba; color: #FFF; font-weight: bold;}
+.pagination li:hover a, ul.pagination li a:focus {background: #e6e6e6; text-decoration: none; color: #909090;}
