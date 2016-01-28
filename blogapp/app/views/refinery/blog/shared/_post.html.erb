@@ -1,0 +1,43 @@
+<% if post.live? %>
+  <article class="post" id="<%= dom_id(post) %>">
+    <h1 class="post-title"><%= link_to post.title, refinery.blog_post_path(post) %></h1>
+    <div class="post-meta-holder">
+      <span class="post-meta">
+        <span class="label"><%=t('blog_posted_date') %></span>
+        <%=post.published_at.to_date.strftime("%Y/%m/%d") %>
+      </span>
+      <% if (categories = post.categories.translated).any? %>
+        <span class="post-meta">
+          <span class="label"><%=t('blog_category') %></span>
+          <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
+        </span>
+      <% end %>
+      <% if (tags = post.tags).any? %>
+        <span class="post-meta">
+          <span class="label"><%=t('blog_tags') %></span>
+          <%=raw tags.collect { |tag| link_to tag, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize) }.to_sentence %>
+        </span>
+      <% end %>
+    </div>
+
+    <section class='clearfix'>
+      <% if blog_post_teaser_enabled? %>
+        <%= blog_post_teaser(post) %>
+      <% else %>
+        <%= post.body.html_safe %>
+      <% end %>
+    </section>
+    <footer>
+      <p>
+        <% if blog_post_teaser_enabled? && post.custom_teaser.present? %>
+        <%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) %>
+        <% end %>
+      </p>
+      <% if Refinery::Blog::Post.comments_allowed? %>
+        <aside class='comment_count'>
+          <%= link_to "#{t('title', :scope => 'refinery.blog.posts.show.comments')} (#{post.comments.approved.count})", refinery.blog_post_path(post) << '#comments' %>
+        </aside>
+      <% end %>
+    </footer>
+  </article>
+<% end %>

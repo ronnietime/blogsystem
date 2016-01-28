@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  blog_posted_date: "Posted Date:"
+  blog_category: "Category:"
+  blog_tags: "Tags:"
