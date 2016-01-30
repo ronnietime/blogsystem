@@ -1,18 +1,12 @@
-<% content_for :body do %>
-  <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
+<%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
 
-  <section class="main">
-    <% if @posts.any? %>
-      <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
-      <%= will_paginate @posts %>
-    <% end %>
-  </section>
-<% end %>
+<section class="main">
+  <% if @posts.any? %>
+    <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+    <%= will_paginate @posts %>
+  <% end %>
+</section>
 
-<% content_for :side_body_prepend do -%>
-  <%= raw @page.content_for(Refinery::Pages.default_parts.second.to_sym) %>
-<% end if Refinery::Pages.default_parts.many? -%>
 <%= render '/refinery/blog/shared/body_content_right' %>
 
 <%= render "/refinery/content_page", :hide_sections => :body_content_title %>
-<% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
