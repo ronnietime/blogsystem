@@ -4,7 +4,7 @@
     <div class="post-meta-holder">
       <span class="post-meta">
         <span class="label"><%=t('blog_posted_date') %></span>
-        <%=post.published_at.to_date.strftime("%Y/%m/%d") %>
+        <%=post.published_at.to_date.strftime("%Y-%m-%d") %>
       </span>
       <% if (categories = post.categories.translated).any? %>
         <span class="post-meta">
