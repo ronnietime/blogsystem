@@ -1,5 +1,4 @@
-# IntelliJ Project files #
-##########################
 .idea
 *.iml
 *~
+tmp/
