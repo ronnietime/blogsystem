@@ -16,5 +16,5 @@ production: &production
   adapter: mysql2
   host: localhost
   database: <%= Rails.application.engine_name.gsub(/_application/,'').downcase %>_production
-  username: your_production_database_login
-  password: your_production_database_password
+  username: blog
+  password: <%= begin IO.read("/home/zhuwu/.blog_db_secret") rescue "" end %>
