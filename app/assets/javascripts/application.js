@@ -23,7 +23,9 @@
             delete window[i];
         }
     }
-    window.addthis_share = null;
+    window.addthis_share = {
+      title: "It is awsome! →_→ " + $('title').text()
+    };
 
     // Finally, load addthis
     $.getScript("//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50b5b67007d0b4d4");
