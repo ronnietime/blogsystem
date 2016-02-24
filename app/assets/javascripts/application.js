@@ -16,7 +16,7 @@
 //= require_tree .
 
 (function() {
-  var initAdthis = function(){
+  var initAddThis = function() {
     // Remove all global properties set by addthis, otherwise it won't reinitialize
     for (var i in window) {
         if (/^addthis/.test(i) || /^_at/.test(i)) {
@@ -29,10 +29,15 @@
 
     // Finally, load addthis
     $.getScript("//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50b5b67007d0b4d4");
-  }
+  };
+
+  var initQrCode = function() {
+    new QRCode(document.getElementById("qr-code"), location.href);
+  };
 
   // Trigger the function on both jquery's ready event and turbolinks page:change event
-  $(document).on('ready page:change', function() {
-      initAdthis();
+  $(document).on('ready', function() {
+    initAddThis();
+    initQrCode();
   });
 }) ();
