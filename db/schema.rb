@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160124175919) do
+ActiveRecord::Schema.define(version: 20160225045845) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title", limit: 255
@@ -289,4 +289,14 @@ ActiveRecord::Schema.define(version: 20160124175919) do
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
+  create_table "tokens", force: :cascade do |t|
+    t.integer  "refinery_authentication_devise_user_id", limit: 4
+    t.string   "secret",                                 limit: 255
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+  end
+
+  add_index "tokens", ["refinery_authentication_devise_user_id"], name: "fk_rails_29201d45cb", using: :btree
+
+  add_foreign_key "tokens", "refinery_authentication_devise_users"
 end

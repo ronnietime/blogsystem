@@ -51,6 +51,8 @@ group :development do
   gem 'capistrano3-puma',   require: false
 end
 
+gem 'rotp'
+
 gem 'puma'
 
 gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
