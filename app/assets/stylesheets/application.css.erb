@@ -91,8 +91,10 @@ code {font-family: "Courier New", Courier, monospace;}
 /* Content Area*/
 .content {position: relative; z-index: 30; overflow: hidden; margin: 16px auto 0;}
 .content .selected-tag {margin: 0 0 0.5em; padding: 0 16px; font-size: 2.5em; text-shadow: #ccc 0 0 2px; color: #83b200; line-height: 1em;}
-.main {float: left; width: 680px; padding: 0 0 0 16px;} 
+.main {float: left; width: 680px; padding: 0 0 0 16px;}
+.main.static {float: none; width: auto; padding: 0 16px;}
 .post {overflow: hidden; margin: 0 0 16px; padding: 0 0 5px; border-bottom: 1px solid #096AA2; -moz-box-shadow: 0 0 10px #AAA; -webkit-box-shadow: 0 0 10px #AAA; box-shadow: 0 0 10px #AAA;}
+.static .post {border-top: 2px solid #096aa2;}
 .post-title {padding: 0 16px; border-top: 2px solid #096aa2; border-bottom: 1px solid #5296bd; font-size: 1.1em; line-height: 2.1em; background: -webkit-linear-gradient(#F3F3F3, #E9E9E9); background: -o-linear-gradient(#F3F3F3, #E9E9E9); background: -moz-linear-gradient(#F3F3F3, #E9E9E9); background: linear-gradient(#F3F3F3, #E9E9E9); color: #05456a; text-shadow: none;}
 .post-title a {color: #05456a;}
 .post-title a:hover {color: #c80000; text-decoration: none;}
@@ -116,6 +118,9 @@ code {font-family: "Courier New", Courier, monospace;}
 .post-body ul {padding: 0 15px 0 30px; list-style: disc;}
 .post-body ol {padding: 0 15px 0 30px; list-style: decimal;}
 .post-body li {margin-bottom: 3px; }
+.post-body input {padding: 1px; border: 2px inset;}
+.post-body input[type="submit"] {padding: 2px 6px 3px; border: 2px outset buttonface;}
+.post-body input[type="submit"]:active {border-style: inset;}
 .read-more, .prev-next-holder {overflow: hidden; padding: 0 16px 16px 16px;}
 .read-more a {float: right; height: 20px; padding-left: 20px; color: #1f6dae; line-height: 20px; text-decoration: none; text-transform: uppercase; text-shadow: #f0f0f0 1px 1px 2px; font-weight: bold; background-position: 0 -44px;}
 .read-more a:hover {color: #000;}

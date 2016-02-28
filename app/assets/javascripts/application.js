@@ -32,12 +32,25 @@
   };
 
   var initQrCode = function() {
-    new QRCode(document.getElementById("qr-code"), location.href);
+    var qrCodeHolder = document.getElementById("qr-code");
+    if (qrCodeHolder) {
+      new QRCode(qrCodeHolder, location.href);
+    }
   };
+
+  var initGoogleAuthenticatorQrCode = function() {
+    var qrCodeHolder = document.getElementById('google-authenticator-qr-code');
+    if (qrCodeHolder) {
+      $('#submit').on('click', function() {
+        new QRCode(qrCodeHolder, 'otpauth://totp/zhuwu@zhuwu.me?secret=' + $('#secret').val().toUpperCase());
+      });
+    }
+  }
 
   // Trigger the function on both jquery's ready event and turbolinks page:change event
   $(document).on('ready', function() {
     initAddThis();
     initQrCode();
+    initGoogleAuthenticatorQrCode();
   });
 }) ();

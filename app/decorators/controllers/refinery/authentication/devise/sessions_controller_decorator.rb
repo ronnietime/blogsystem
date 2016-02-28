@@ -14,7 +14,7 @@ Refinery::Authentication::Devise::SessionsController.class_eval do
     secret = Token.where(["refinery_authentication_devise_user_id = ?", userId]).order(:id).limit(1).pluck(:secret)[0];
     raise RuntimeError if secret.blank?
 
-    totp = ROTP::TOTP.new(secret, {:interval => 60})
+    totp = ROTP::TOTP.new(secret)
     raise RuntimeError if !totp.verify(otp)
 
   rescue RuntimeError
