@@ -16,21 +16,6 @@
 //= require_tree .
 
 (function() {
-  var initAddThis = function() {
-    // Remove all global properties set by addthis, otherwise it won't reinitialize
-    for (var i in window) {
-        if (/^addthis/.test(i) || /^_at/.test(i)) {
-            delete window[i];
-        }
-    }
-    window.addthis_share = {
-      title: "It is awsome! →_→ " + $('title').text()
-    };
-
-    // Finally, load addthis
-    $.getScript("//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50b5b67007d0b4d4");
-  };
-
   var initQrCode = function() {
     var qrCodeHolder = document.getElementById("qr-code");
     if (qrCodeHolder) {
@@ -49,7 +34,10 @@
 
   // Trigger the function on both jquery's ready event and turbolinks page:change event
   $(document).on('ready', function() {
-    initAddThis();
+    window.jiathis_config = { 
+      title: 'It is awsome! →_→ ' + $('title').text(), 
+      summary: ' ' 
+    } 
     initQrCode();
     initGoogleAuthenticatorQrCode();
   });
