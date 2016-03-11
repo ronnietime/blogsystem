@@ -21,6 +21,7 @@
 
 en:
   hello: "Hello world"
+  copyright: "%{site_name} is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License</a>."
   blog_posted_date: "Posted Date:"
   blog_category: "Category:"
   blog_tags: "Tags:"

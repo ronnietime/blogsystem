@@ -1,8 +1,5 @@
 <%= (navigation_menu false).to_html %>
 
 <footer class="footer">
-  <p>
-    <%= t('.copyright', :year => Time.now.year,
-                        :site_name => Refinery::Core.site_name) %>
-  </p>
+  <p><%= raw t('copyright', :site_name => Refinery::Core.site_name) %></p>
 </footer>
