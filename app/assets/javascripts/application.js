@@ -40,5 +40,6 @@
     } 
     initQrCode();
     initGoogleAuthenticatorQrCode();
+    Prism.highlightAll();
   });
 }) ();
