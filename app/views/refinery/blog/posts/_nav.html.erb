@@ -2,16 +2,14 @@
   <% if @post.next.present? -%>
     <span class="next">
       <%= link_to h(truncate(@post.next.title)).html_safe,
-                refinery.blog_post_path(@post.next),
-                :class => 'sprites' %>
+                refinery.blog_post_path(@post.next)%>
     </span>
   <% end -%>
   
   <% if @post.prev.present? -%>
     <span class="prev">
       <%= link_to h(truncate(@post.prev.title)).html_safe,
-                refinery.blog_post_path(@post.prev),
-                :class => 'sprites' %>
+                refinery.blog_post_path(@post.prev)%>
     </span>
   <% end -%>
 </div>
