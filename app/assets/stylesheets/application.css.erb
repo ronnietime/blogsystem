@@ -42,7 +42,7 @@ a:hover {color: #83b200; text-decoration: underline;}
 i, em {font-style: italic;}
 code, pre, code[class*="language-"], pre[class*="language-"] {font-family: Menlo, 'Lucida Console', Monaco, 'Andale Mono', 'Ubuntu Mono', Consolas, monospace; white-space: pre; background: #f5f2f0;}
 
-.wrapper {background: #fff; max-width: 1024px; margin: 0 auto 20px; -moz-box-shadow: 0 0 10px #AAA; -webkit-box-shadow: 0 0 10px #AAA; box-shadow: 0 0 10px #AAA;}
+.wrapper {background: #fff; min-width: 320px; max-width: 1024px; margin: 0 auto 20px; -moz-box-shadow: 0 0 10px #AAA; -webkit-box-shadow: 0 0 10px #AAA; box-shadow: 0 0 10px #AAA;}
 .sprites {background: url(<%= asset_path 'sprites.png' %>) no-repeat;}
 
 /* Header Area */
@@ -87,7 +87,7 @@ code, pre, code[class*="language-"], pre[class*="language-"] {font-family: Menlo
 .post-year-link:hover, .post-month-link:hover {color: #83b200; text-decoration: none;}
 .archive-year.expanded .post-year-link:before, .archive-month.expanded .post-month-link:before {content: '\25BC\00A0';}
 .post-list li a:before {content: '';}
-.jiathis_style_32x32 {text-align: justify; height: 2rem;}
+.jiathis_style_32x32 {text-align: justify; height: 2rem; max-width: 256px;}
 .jiathis_style_32x32 a {vertical-align: top; display: inline-block; float: none !important;}
 .jiathis_style_32x32.sidebar-list .jtico {background: none; padding-left: 0 !important; margin: 0; font-size: 2rem;}
 .at-icon {fill: #fff; width: 2rem; height: 2rem;}
@@ -151,3 +151,9 @@ code, pre, code[class*="language-"], pre[class*="language-"] {font-family: Menlo
 .pagination .unavailable span {color: #999999;}
 .pagination .current span {background: #008cba; color: #FFF; font-weight: bold;}
 .pagination li:hover a, ul.pagination li a:focus {background: #e6e6e6; text-decoration: none; color: #909090;}
+
+@media screen and (min-width: 640px) {
+  .main-wrapper {float: left; margin-right: -320px; width: 100%;}
+  .main {margin-right: 320px;}
+  .sidebar {width: 288px; float: right;}
+}

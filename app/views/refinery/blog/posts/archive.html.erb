@@ -1,11 +1,13 @@
 <section class="selected-tag"><%="#{t('.blog_archive_for', :date => @date_title)}" %></section>
 
-<section class="main">
-  <% if @posts.any? %>
-    <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
-    <%= will_paginate @posts %>
-  <% end %>
-</section>
+<div class="main-wrapper">
+  <section class="main">
+    <% if @posts.any? %>
+      <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+      <%= will_paginate @posts %>
+    <% end %>
+  </section>
+</div>
 
 <%= render '/refinery/blog/shared/body_content_right' %>
 

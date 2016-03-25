@@ -1,11 +1,13 @@
 <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
 
-<section class="main">
-  <% if @posts.any? %>
-    <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
-    <%= will_paginate @posts %>
-  <% end %>
-</section>
+<div class="main-wrapper">
+  <section class="main">
+    <% if @posts.any? %>
+      <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+      <%= will_paginate @posts %>
+    <% end %>
+  </section>
+</div>
 
 <%= render '/refinery/blog/shared/body_content_right' %>
 

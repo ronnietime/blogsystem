@@ -1,11 +1,13 @@
 <section class="selected-tag"><%=@category.title.html_safe %></section>
 
-<section class="main">
-  <% if @posts.any? %>
-    <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
-    <%= will_paginate @posts %>
-  <% end %>
-</section>
+<div class="main-wrapper">
+  <section class="main">
+    <% if @posts.any? %>
+      <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+      <%= will_paginate @posts %>
+    <% end %>
+  </section>
+</div>
 
 <aside class="sidebar">
   <%= render "/refinery/blog/shared/sharing" %>
