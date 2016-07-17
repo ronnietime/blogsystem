@@ -4,15 +4,18 @@
     <%= render "/refinery/head" %>
   </head>
   <body id="<%= canonical_id @page %>">
-    <div class="wrapper">
+    <%= render "/refinery/menu" -%>
+
+    <div class="hfeed site">
       <%= render "/refinery/header" -%>
 
-      <div class="content">
+      <div class="site-content">
         <%= yield %>
       </div>
 
       <%= render "/refinery/footer" -%>
     </div>
+
     <%= render "/refinery/javascripts" %>
     <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
   </body>

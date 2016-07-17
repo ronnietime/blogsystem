@@ -1,18 +1,5 @@
-<header class="header">
-  <form action="#" class="search-form" method="get" style="display: none;">
-    <fieldset>
-      <input name="q" type="text" value="">
-      <button class="sprites" name="search-submit" type="submit" value="Search"></button>
-    </fieldset>
-  </form>
-  <div class="logo-holder">
-      <h1 class="logo">
-        <%= link_to Refinery::Core.site_name, refinery.root_path %>
-      </h1>
-      <p class="tag-line">
-        <%=t('quote') %>
-      </p>
-    </div>
+<header class="site-header">
+  <div class="site-branding">
+    <h1 class="site-title"><%= link_to Refinery::Core.site_name, refinery.root_path %></h1>
+  </div>
 </header>
-
-<%= (navigation_menu true).to_html %>

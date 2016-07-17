@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 (function() {
@@ -32,12 +31,30 @@
     }
   }
 
-  // Trigger the function on both jquery's ready event and turbolinks page:change event
-  $(document).on('ready', function() {
+  var toggleMenu = function() {
+    $('.menu-toggle').on('click', function(e) {
+      e.preventDefault();
+      var target = $(this),
+          menu = $('.slide-menu'),
+          body = $('body');
+      if (target.hasClass('toggle-on')) {
+        target.removeClass('toggle-on');
+        menu.removeClass('expanded');
+        body.removeClass('sidebar-open');
+      } else {
+        target.addClass('toggle-on');
+        menu.addClass('expanded');
+        body.addClass('sidebar-open');
+      }
+    });
+  }
+
+  $(document).ready(function() {
     window.jiathis_config = { 
       title: 'It is awsome! →_→ ' + $('title').text(), 
       summary: ' ' 
-    } 
+    }
+    toggleMenu();
     initQrCode();
     initGoogleAuthenticatorQrCode();
     Prism.highlightAll();
