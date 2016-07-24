@@ -21,8 +21,6 @@
   margin: 0;
   padding: 0;
   border: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
@@ -54,8 +52,11 @@ img {
 img, embed, video, object {
   max-width: 100%;
 }
-a, a:visited, a:hover {
+a, a:visited, a:focus, a:active, a:hover {
+  color: #cc523e;
   text-decoration: none;
+  transition: .2s all ease-in-out;
+  word-break: break-word;
 }
 i, em {
   font-style: italic;
@@ -265,6 +266,104 @@ code, pre, code[class*="language-"], pre[class*="language-"] {
     max-width: 100%;
     text-align: center;
   }
+}
+
+/* Content */
+.site-content {
+  margin: 0 1rem;
+}
+
+article {
+  margin: 3rem 0;
+
+  .entry-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .entry-title {
+    font-size: 2rem;
+    text-align: center;
+
+    a {
+      color: #606666;
+    }
+  }
+
+  .entry-content {
+
+    > * {
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    p:first-of-type:first-letter {
+      font-size: 3.625rem;
+      font-weight: bold;
+      float: left;
+      line-height: 0.92;
+      margin-right: 6px;
+    }
+
+    .read-more {
+      a {
+        position: relative;
+
+        &:after {
+          position: absolute;
+          top: 110%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: #cc523e;
+          content: '';
+          opacity: 0;
+          transition: opacity 0.3s, transform 0.3s;
+          transform: translateY(5px);
+        }
+
+        &:hover:after, &focus:after, &active:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  .entry-meta {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .secondary-entry-meta {
+    margin-top: 1.5rem;
+
+    &:before {
+      background: #e2e7e8;
+      content: "";
+      display: block;
+      height: 1px;
+    }
+  }
+
+  .tags-links {
+    font-size: 0.75rem;
+
+    a {
+      border: 2px solid #c8cbcc;
+      border-radius: 35px;
+      color: #c8cbcc;
+      display: inline-block;
+      font-weight: bold;
+      margin: 0 0.5rem 0.5rem;
+      padding: 0.25rem 0.75rem;
+
+      &:hover, &:focus, &:active {
+        color: #cc523e;
+        border-color: #cc523e;
+      }
+    }
+  }
+
 }
 
 /* Header Area */

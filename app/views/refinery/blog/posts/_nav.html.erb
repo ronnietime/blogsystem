@@ -10,7 +10,7 @@
 
   <% if @post.next.present? -%>
     <div class="nav-next">
-      <a href="<%= refinery.blog_post_path(@post.prev) %>">
+      <a href="<%= refinery.blog_post_path(@post.next) %>">
         <span class="title"><%= t('next_post') %></span>
         <%= truncate(@post.next.title).html_safe %>
       </a>

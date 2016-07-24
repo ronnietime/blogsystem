@@ -1,12 +1,10 @@
 <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
 
 <div class="content-area">
-  <main class="site-main">
-    <% if @posts.any? %>
-      <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
-      <%= will_paginate @posts %>
-    <% end %>
-  </main>
+  <% if @posts.any? %>
+    <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+    <%= will_paginate @posts %>
+  <% end %>
 </div>
 
 <%= render "/refinery/content_page", :hide_sections => :body_content_title %>
