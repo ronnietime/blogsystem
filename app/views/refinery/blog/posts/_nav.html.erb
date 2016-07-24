@@ -1,15 +1,19 @@
-<div class="prev-next-holder">
-  <% if @post.next.present? -%>
-    <span class="next">
-      <%= link_to h(truncate(@post.next.title)).html_safe,
-                refinery.blog_post_path(@post.next)%>
-    </span>
-  <% end -%>
-  
+<div class="nav-links">
   <% if @post.prev.present? -%>
-    <span class="prev">
-      <%= link_to h(truncate(@post.prev.title)).html_safe,
-                refinery.blog_post_path(@post.prev)%>
-    </span>
+    <div class="nav-previous">
+      <a href="<%= refinery.blog_post_path(@post.prev) %>">
+        <span class="title"><%= t('prev_post') %></span>
+        <%= truncate(@post.prev.title).html_safe %>
+      </a>
+    </div>
+  <% end -%>
+
+  <% if @post.next.present? -%>
+    <div class="nav-next">
+      <a href="<%= refinery.blog_post_path(@post.prev) %>">
+        <span class="title"><%= t('next_post') %></span>
+        <%= truncate(@post.next.title).html_safe %>
+      </a>
+    </div>
   <% end -%>
 </div>

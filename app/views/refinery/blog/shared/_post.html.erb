@@ -1,37 +1,16 @@
 <% if post.live? %>
-  <article class="post" id="<%= dom_id(post) %>">
-    <h1 class="post-title"><%= link_to post.title, refinery.blog_post_path(post) %></h1>
-    <div class="post-meta-holder">
-      <span class="post-meta">
-        <span class="label"><%=t('blog_posted_date') %></span>
-        <%=post.published_at.to_date.strftime("%Y-%m-%d") %>
-      </span>
-      <% if (categories = post.categories.translated).any? %>
-        <span class="post-meta">
-          <span class="label"><%=t('blog_category') %></span>
-          <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
-        </span>
-      <% end %>
-      <% if (tags = post.tags).any? %>
-        <span class="post-meta">
-          <span class="label"><%=t('blog_tags') %></span>
-          <%=raw tags.collect { |tag| link_to tag, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize) }.to_sentence %>
-        </span>
-      <% end %>
+  <article class="post">
+    <header class="entry-header">
+      <h1 class="entry-title"><%= link_to post.title, refinery.blog_post_path(post) %></h1>      
+    </header>
+
+    <div class="entry-content">
+      <%= blog_post_teaser(post) %>
+      <p class="read-more">
+        <%= link_to t('continue_reading'), refinery.blog_post_path(post) %>
+      </p>
     </div>
 
-    <div class="post-body">
-      <% if blog_post_teaser_enabled? %>
-        <%= blog_post_teaser(post) %>
-      <% else %>
-        <%= post.body.html_safe %>
-      <% end %>
-    </div>
-
-    <% if blog_post_teaser_enabled? %>
-      <div class="read-more">
-        <%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) %>
-      </div>
-    <% end %>
+    <%= render :partial => "/refinery/blog/shared/post_meta", locals: { post: post } %>
   </article>
 <% end %>
