@@ -301,12 +301,65 @@ article {
       line-height: 1.7;
     }
 
-    p:first-of-type:first-letter {
+    > p:first-child:first-letter {
       font-size: 3.625rem;
       font-weight: bold;
       float: left;
       line-height: 0.92;
       margin-right: 6px;
+    }
+
+    ul {
+      padding: 0 0 0 2rem;
+      list-style: disc;
+    }
+
+    ol {
+      padding: 0 0 0 2rem;
+      list-style: decimal;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    img {
+      height: auto;
+    }
+
+    blockquote {
+      padding: 1rem;
+      border: 1px solid #d9d9d9;
+      background: #f8f8f8;
+      font-style: italic;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow: auto;
+    }
+
+    table {
+      margin-left: auto;
+      margin-right: auto; 
+      border: 1px solid #d9d9d9;
+    }
+
+    th, td {
+      padding: 0.25rem 0.5rem;
+      border: 1px solid #d9d9d9;
+    }
+
+    th {
+      background: #eef4f8;
     }
 
     .read-more {
@@ -378,6 +431,7 @@ article {
 
     a {
       color: #606666;
+      display: block;
       font-size: 0.875rem;
       font-style: italic;
 
