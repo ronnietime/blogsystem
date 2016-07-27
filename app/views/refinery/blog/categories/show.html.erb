@@ -1,7 +1,9 @@
-<section class="selected-tag"><%=@category.title.html_safe %></section>
-
 <div class="main-wrapper">
   <section class="main">
+    <header class="page-header">
+      <h1><%= t('category') %> <%= @category.title.html_safe %></h1>      
+    </header>
+
     <% if @posts.any? %>
       <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
       <%= will_paginate @posts %>
