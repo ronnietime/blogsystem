@@ -15,22 +15,6 @@
 //= require_tree .
 
 (function() {
-  var initQrCode = function() {
-    var qrCodeHolder = document.getElementById("qr-code");
-    if (qrCodeHolder) {
-      new QRCode(qrCodeHolder, location.href);
-    }
-  };
-
-  var initGoogleAuthenticatorQrCode = function() {
-    var qrCodeHolder = document.getElementById('google-authenticator-qr-code');
-    if (qrCodeHolder) {
-      $('#submit').on('click', function() {
-        new QRCode(qrCodeHolder, 'otpauth://totp/zhuwu@zhuwu.me?secret=' + $('#secret').val().toUpperCase());
-      });
-    }
-  }
-
   var toggleMenu = function() {
     $('.menu-toggle').on('click', function(e) {
       e.preventDefault();
@@ -50,13 +34,7 @@
   }
 
   $(document).ready(function() {
-    window.jiathis_config = { 
-      title: 'It is awsome! →_→ ' + $('title').text(), 
-      summary: ' ' 
-    }
     toggleMenu();
-    initQrCode();
-    initGoogleAuthenticatorQrCode();
     Prism.highlightAll();
   });
 }) ();
