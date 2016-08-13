@@ -1,6 +1,8 @@
 <div class="entry-meta">
   <div class="tags-links">
-    <%= raw post.categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
+    <% post.categories.each do |category| %>
+      <%= link_to category.title, refinery.blog_category_path(category) %>
+    <%end %>
   </div>
   <div class="posted-on">
     <%=t('blog_posted_date') %> <%= post.published_at.to_date.strftime("%B %d, %Y") %>
