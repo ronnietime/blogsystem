@@ -2,8 +2,13 @@
 
 <div class="content-area">
   <% if @posts.any? %>
-    <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
-    <%= will_paginate @posts %>
+    <div id="posts">
+      <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+    </div>
+
+    <div id="infinite-scrolling">
+      <%= will_paginate @posts %>
+    </div>
   <% end %>
 </div>
 

@@ -33,8 +33,20 @@
     });
   }
 
+  var infiniteScroll = function() {
+    if ($('#infinite-scrolling').length > 0) {
+      $(window).on('scroll', function() {
+        var nextPageUrl = $('.pagination .next_page').prop('href');
+        if (nextPageUrl && $(window).scrollTop() > $(document).height() - $(window).height() - 60) {
+          $.getScript(nextPageUrl);
+        }
+      });
+    }
+  }
+
   $(document).ready(function() {
     toggleMenu();
     Prism.highlightAll();
+    infiniteScroll();
   });
 }) ();
