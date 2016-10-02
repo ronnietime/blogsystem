@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<%= render "/refinery/html_tag" %>
+<%= render '/refinery/html_tag' %>
   <head>
-    <%= render "/refinery/head" %>
+    <%= render '/refinery/head' %>
   </head>
-  <body id="<%= canonical_id @page %>">
-    <%= render "/refinery/menu" -%>
+  <body id="<%= canonical_id @page %>" class="<%= yield :body_class %>">
+    <%= render '/refinery/menu' -%>
 
     <div class="hfeed site">
-      <%= render "/refinery/header" -%>
+      <%= render '/refinery/header' -%>
 
+      <div class="header-top"></div>
       <div class="site-content">
+        <%= yield :additional_top %>
         <%= yield %>
       </div>
 
-      <%= render "/refinery/footer" -%>
+      <%= render '/refinery/footer' -%>
     </div>
 
-    <%= render "/refinery/javascripts" %>
+    <%= render '/refinery/javascripts' %>
   </body>
 </html>

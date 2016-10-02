@@ -1,0 +1,23 @@
+<div class="content-area">
+  <% if @posts.any? %>
+      <% if @posts.current_page > 1 %>
+          <% content_for :additional_top do %><div class="header-top" id="additional-top"></div><% end %>
+      <% end %>
+      <div id="posts">
+        <div data-page="<%= request.query_parameters['page'] || 1 %>">
+          <%= render partial: '/refinery/blog/shared/post', collection: @posts %>
+        </div>
+      </div>
+
+      <% content_for :javascripts do %>
+          <script type="application/javascript">
+            $(document).ready(function() {
+              initScroll(<%= @posts.current_page %>, <%= @posts.total_pages %>);
+            });
+          </script>
+      <% end %>
+<% end %>
+</div>
+
+<% content_for :body_class do 'listing' end %>
+

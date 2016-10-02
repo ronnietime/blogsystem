@@ -4,17 +4,7 @@
       <h1><%= t('category') %> <%= @category.title.html_safe %></h1>      
     </header>
 
-    <% if @posts.any? %>
-      <div id="posts">
-        <div data-page="<%= request.query_parameters['page'] || 1 %>">
-          <%= render partial: '/refinery/blog/shared/post', collection: @posts %>
-        </div>
-      </div>
-
-      <div id="infinite-scrolling">
-        <%= will_paginate @posts %>
-      </div>
-    <% end %>
+    <%= render 'refinery/blog/shared/content_listing' %>
   </section>
 </div>
 

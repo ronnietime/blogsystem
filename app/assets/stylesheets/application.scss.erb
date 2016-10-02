@@ -82,7 +82,7 @@ code, pre, code[class*="language-"], pre[class*="language-"] {
 .menu-toggle {
   display: block;
   opacity: 0.3;
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 1rem;
   z-index: 1005;
@@ -159,7 +159,11 @@ code, pre, code[class*="language-"], pre[class*="language-"] {
 .site-header {
   border-bottom: 2px solid #e2e7e8;
   padding: .5rem 1.5rem;
-  position: relative;
+  position: fixed;
+  top: 0;
+  background-color: #fffdfd;
+  width: 100%;
+  z-index: 998;
 
   .site-branding {
     height: 2.5rem;
@@ -300,6 +304,10 @@ code, pre, code[class*="language-"], pre[class*="language-"] {
 }
 
 /* Content */
+.header-top {
+  height: 3.625rem;
+}
+
 .site-content {
   margin: 0 1.5rem;
 }

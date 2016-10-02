@@ -1,18 +1,5 @@
 <%= raw @page.content_for(Refinery::Pages.default_parts.first[:title].to_sym) if Refinery::Pages.default_parts.any? %>
 
-<div class="content-area">
-  <% if @posts.any? %>
-      <div id="posts">
-        <div data-page="<%= request.query_parameters['page'] || 1 %>">
-          <%= render partial: '/refinery/blog/shared/post', collection: @posts %>
-        </div>
-      </div>
-
-      <div id="infinite-scrolling">
-        <%= will_paginate @posts %>
-      </div>
-  <% end %>
-</div>
-
+<%= render 'refinery/blog/shared/content_listing' %>
 <%= render '/refinery/content_page', hide_sections: :body_content_title %>
 <%= render '/refinery/blog/shared/prev_next_meta' %>
