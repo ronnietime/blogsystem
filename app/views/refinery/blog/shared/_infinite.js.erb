@@ -1,0 +1,15 @@
+(function() {
+  var html = '<div data-page="<%= request.query_parameters['page'] %>"><%= j render(partial: '/refinery/blog/shared/post', collection: @posts) %></div>'
+  <% if @posts %>
+    <% if request.query_parameters['direction'] != 'up' %>
+      $('#posts').append(html);
+      <% if @posts.next_page %>
+        $('.pagination').replaceWith('<%= j will_paginate @posts %>');
+      <% else %>
+        $('#infinite-scrolling').remove();
+      <% end %>
+    <% else %>
+      $('#posts').prepend(html);
+    <% end %>
+  <% end %>
+})();

@@ -1,0 +1,9 @@
+<% content_for :meta do %>
+    <% if @posts.next_page %>
+        <link rel="next" href="<%= "#{request.path}?page=#{@posts.next_page}" %>">
+    <% end %>
+    <% if @posts.previous_page %>
+        <% url = @posts.previous_page == 1 ? request.path : "#{request.path}?page=#{@posts.previous_page}" %>
+        <link rel="prev" href="<%= url %>">
+    <% end %>
+<% end %>

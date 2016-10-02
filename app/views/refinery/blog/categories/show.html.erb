@@ -6,7 +6,9 @@
 
     <% if @posts.any? %>
       <div id="posts">
-        <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+        <div data-page="<%= request.query_parameters['page'] || 1 %>">
+          <%= render partial: '/refinery/blog/shared/post', collection: @posts %>
+        </div>
       </div>
 
       <div id="infinite-scrolling">
@@ -16,4 +18,5 @@
   </section>
 </div>
 
-<%= render "/refinery/content_page", :hide_sections => :body_content_title %>
+<%= render '/refinery/content_page', hide_sections: :body_content_title %>
+<%= render '/refinery/blog/shared/prev_next_meta' %>
