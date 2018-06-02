@@ -20,6 +20,6 @@ Refinery::Authentication::Devise::SessionsController.class_eval do
   rescue RuntimeError
     flash[:error] = t('wrong_username_otp')
     logger.error("Wrong username/email or wrong OTP was entered. Username: [#{name}]. OTP: [#{otp}].")
-    redirect_to :back
+    redirect_back fallback_location: '/', allow_other_host: false
   end
 end
