@@ -1,5 +1,6 @@
 # Load DSL and set up stages
 require 'capistrano/setup'
+require 'capistrano/scm/git'
 
 # Include default deployment tasks
 require 'capistrano/deploy'
